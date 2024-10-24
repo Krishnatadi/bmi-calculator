@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how to use the BMI Calculator to determine your Body Mass Index and understand your weight category and potential health implications.">
+    <meta name="keywords" content="BMI Calculator, Body Mass Index, health, weight category, height, weight, health tool, BMI interpretation, health advice">
+    
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="bmi-container">
+        <h2 class="bmi-title">BMI Calculator</h2>
+        <div class="bmi-form-group">
+            <label for="units" class="bmi-form-label">Units:</label>
+            <select id="units" class="bmi-form-input" onchange="toggleUnits()">
+                <option value="metric">Metric (kg, cm)</option>
+                <option value="imperial">Imperial (lbs, in)</option>
+            </select>
+        </div>
+        <div class="bmi-form-group">
+            <label for="weight" class="bmi-form-label">Weight (kg):</label>
+            <input type="number" id="weight" class="bmi-form-input" placeholder="Enter your weight" min="0" step="any">
+        </div>
+        <div class="bmi-form-group">
+            <label for="height" class="bmi-form-label">Height (cm):</label>
+            <input type="number" id="height" class="bmi-form-input" placeholder="Enter your height" min="0" step="any">
+        </div>
+        <button onclick="calculateBMI()" class="bmi-btn">Calculate BMI</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
